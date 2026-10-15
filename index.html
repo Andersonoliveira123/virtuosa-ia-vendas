@@ -1,1 +1,72 @@
-https://pay.kiwify.com.br/qse7kJl?afid=N9SNvRaI
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14213d">
+<link rel="manifest" href="manifest.json">
+<title>Virtuosa IA Vendas</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#eef2f8;font-family:Arial,sans-serif;color:#14213d}
+header{background:#14213d;color:white;padding:28px 18px;text-align:center}
+h1{margin:0;font-size:27px}
+header p{color:#cdd9ef}
+main{max-width:500px;margin:22px auto;padding:0 16px}
+.card{background:white;border-radius:16px;padding:22px;margin-bottom:16px;box-shadow:0 4px 15px #0001}
+h2{font-size:20px}
+button,a.botao{display:block;width:100%;padding:15px;border:0;border-radius:10px;background:#1673e6;color:white;font-size:16px;font-weight:bold;text-align:center;text-decoration:none;margin-top:12px;cursor:pointer}
+.verde{background:#178548!important}
+input{width:100%;padding:13px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+#resposta{white-space:pre-wrap;line-height:1.6}
+footer{text-align:center;padding:20px;color:#667}
+</style>
+</head>
+<body>
+<header>
+<h1>Virtuosa IA Vendas</h1>
+<p>Seu assistente de atendimento e vendas</p>
+</header>
+<main>
+<div class="card">
+<h2>Bem-vindo!</h2>
+<p>Prepare mensagens para atender clientes com clareza e profissionalismo.</p>
+</div>
+<div class="card">
+<h2>Atendimento assistido</h2>
+<p>Digite o nome do cliente:</p>
+<input id="nome" placeholder="Nome do cliente">
+<button onclick="preparar()">Preparar mensagem</button>
+<p id="resposta"></p>
+<button onclick="enviar()" class="verde">Enviar pelo WhatsApp</button>
+</div>
+<div class="card">
+<h2>Produto em destaque</h2>
+<h3>Virtuosa e Fitness</h3>
+<p>Conheça a oferta e confira todos os detalhes na página oficial do produto.</p>
+<a class="botao" href="https://pay.kiwify.com.br/qse7kJl?afid=N9SNvRaI" target="_blank" rel="noopener">Ver produto na Kiwify</a>
+</div>
+</main>
+<footer>Virtuosa IA Vendas - Versão 1</footer>
+<script>
+let mensagem="";
+function preparar(){
+const nome=document.getElementById("nome").value.trim()||"tudo bem";
+mensagem=`Olá, ${nome}! Tudo bem? 😊
+
+Quero apresentar o Virtuosa e Fitness.
+
+Se você tem interesse em conhecer essa oferta, posso compartilhar o link para você conferir os detalhes e decidir se faz sentido para você.
+
+Confira aqui:
+https://pay.kiwify.com.br/qse7kJl?afid=N9SNvRaI`;
+document.getElementById("resposta").textContent=mensagem;
+}
+function enviar(){
+if(!mensagem)preparar();
+window.open("https://wa.me/?text="+encodeURIComponent(mensagem),"_blank");
+}
+</script>
+</body>
+</html>
