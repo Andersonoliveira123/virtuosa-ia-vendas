@@ -1,4 +1,5 @@
-"name": "Virtuosa IA Vendas",
+{
+  "name": "Virtuosa IA Vendas",
   "short_name": "Virtuosa IA",
   "description": "Assistente de atendimento e vendas",
   "start_url": "./index.html",
@@ -8,3 +9,4 @@
   "theme_color": "#2563eb",
   "lang": "pt-BR"
 }
+
